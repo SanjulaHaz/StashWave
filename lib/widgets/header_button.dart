@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Button extends StatelessWidget {
+class HeaderButton extends StatelessWidget {
 
   final String text;
   final Function onPressed;
 
-  const Button({super.key, required this.text, required this.onPressed});
+  const HeaderButton({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

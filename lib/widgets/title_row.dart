@@ -25,6 +25,9 @@ class TitleRow extends StatelessWidget {
         Row(
           children: [
             Icon(icon, color: Colors.white, size: 18),
+            SizedBox(
+              width: 5,
+            ),
             Text(
               rText,
               style: TextStyle(

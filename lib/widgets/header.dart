@@ -1,4 +1,4 @@
-import 'package:btc_app/widgets/button.dart';
+import 'package:btc_app/widgets/header_button.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -63,7 +63,7 @@ class Header extends StatelessWidget {
                     ),
                   ],
                 ),
-                Button(text: "Fund", onPressed: (){}),
+                HeaderButton(text: "Fund", onPressed: (){}),
               ],
             ),
             const SizedBox(

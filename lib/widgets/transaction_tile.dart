@@ -6,9 +6,10 @@ class TransactionTile extends StatelessWidget {
   final String name;
   final String date;
   final String amount;
-  final bool isCompleted;
+  final String status;
+  final Color color;
 
-  const TransactionTile({super.key, required this.profilePhoto, required this.name, required this.date, required this.amount, required this.isCompleted});
+  const TransactionTile({super.key, required this.profilePhoto, required this.name, required this.date, required this.amount, required this.status, required this.color});
 
 
   @override
@@ -58,7 +59,7 @@ class TransactionTile extends StatelessWidget {
             Text(
               amount,
               style: TextStyle(
-                color: isCompleted?Color(0xff09C53E):Color(0xffD42020),
+                color: color,
                 fontFamily: "Inter",
                 fontWeight: FontWeight.w700,
                 fontSize: 20,
@@ -68,9 +69,9 @@ class TransactionTile extends StatelessWidget {
               height: 2,
             ),
             Text(
-              isCompleted?"COMPLETE":"FAILED",
+              status,
               style: TextStyle(
-                color: isCompleted?Color(0xff09C53E):Color(0xffD42020),
+                color: color,
                 fontFamily: "Inter",
                 fontWeight: FontWeight.w700,
                 fontSize: 12,

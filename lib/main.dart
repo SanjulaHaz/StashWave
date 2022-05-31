@@ -1,4 +1,10 @@
-import 'package:btc_app/home.dart';
+import 'package:btc_app/receive_money.dart';
+import 'package:btc_app/request_circle.dart';
+import 'package:btc_app/request_money.dart';
+import 'package:btc_app/send_circle.dart';
+import 'package:btc_app/send_form.dart';
+import 'package:btc_app/send_money.dart';
+import 'package:btc_app/withdrawal_form.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +20,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color(0xff02071A),
         primaryColor: const Color(0xff151A29),
       ),
-      home: Home(),
+      home: SendCircle(),
     );
   }
 }
