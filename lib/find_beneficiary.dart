@@ -58,7 +58,7 @@ class FindBeneficiary extends StatelessWidget {
                                           color: Colors.white,
                                           fontFamily: "Inter",
                                           fontWeight: FontWeight.w700,
-                                          fontSize: 14,
+                                          fontSize: 16,
                                         ),
                                       ),
                                       SizedBox(
@@ -69,8 +69,8 @@ class FindBeneficiary extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontFamily: "Inter",
-                                          fontWeight: FontWeight.w700,
-                                          fontSize: 12,
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 14,
                                         ),
                                       ),
                                     ],
