@@ -1,10 +1,9 @@
 import 'package:btc_app/widgets/footer.dart';
 import 'package:btc_app/widgets/header.dart';
 import 'package:btc_app/widgets/img_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class WithdrawalOptions extends StatelessWidget {
+class FundingOptions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class WithdrawalOptions extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Withdrawal accounts",
+                  "Fund account options",
                   style: TextStyle(
                     color: Color(0xff40E0E0),
                     fontFamily: "Inter",
@@ -37,14 +36,14 @@ class WithdrawalOptions extends StatelessWidget {
             ),
             ImgButton(
               leadingImage: "assets/phone.png",
-              text: "Mobile money",
+              text: "Deposit with card (MoonPay)",
             ),
             SizedBox(
               height: 8,
             ),
             ImgButton(
               leadingImage: "assets/bank.png",
-              text: "Bank",
+              text: "Deposit BTC, CashApp, Wallets",
             ),
             Expanded(
               child: SizedBox(),
