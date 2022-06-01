@@ -1,6 +1,7 @@
 import 'package:btc_app/approve_account.dart';
 import 'package:btc_app/find_beneficiary.dart';
 import 'package:btc_app/funding_options.dart';
+import 'package:btc_app/otp.dart';
 import 'package:btc_app/receive_money.dart';
 import 'package:btc_app/request_circle.dart';
 import 'package:btc_app/request_money.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color(0xff02071A),
         primaryColor: const Color(0xff151A29),
       ),
-      home: ApproveAccount(),
+      home: OTP(),
     );
   }
 }
