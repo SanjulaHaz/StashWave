@@ -16,6 +16,10 @@ class InputField extends StatelessWidget {
           borderRadius: BorderRadius.circular(3),
           borderSide: BorderSide(color: Colors.white),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(3),
+          borderSide: BorderSide(color: Colors.white),
+        ),
         hintText: text,
         hintStyle: TextStyle(
           color: Colors.white,
