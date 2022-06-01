@@ -1,5 +1,9 @@
+import 'package:btc_app/receive_money.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+
+import 'funding_options.dart';
 
 class OTP extends StatelessWidget {
 
@@ -36,6 +40,12 @@ class OTP extends StatelessWidget {
                   enableActiveFill: true,
                   showCursor: false,
                   obscureText: true,
+                  onCompleted: (index){
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(builder: (context) => ReceiveMoney()),
+                    );
+                  },
                   textStyle: TextStyle(
                     color: Color(0xff40E0E0),
                     height: 1,

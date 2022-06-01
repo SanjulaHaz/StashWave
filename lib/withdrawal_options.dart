@@ -1,3 +1,4 @@
+import 'package:btc_app/approve_account.dart';
 import 'package:btc_app/widgets/footer.dart';
 import 'package:btc_app/widgets/header.dart';
 import 'package:btc_app/widgets/img_button.dart';
@@ -38,6 +39,12 @@ class WithdrawalOptions extends StatelessWidget {
             ImgButton(
               leadingImage: "assets/phone.png",
               text: "Mobile money",
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(builder: (context) => ApproveAccount()),
+                );
+              },
             ),
             SizedBox(
               height: 8,
@@ -45,11 +52,12 @@ class WithdrawalOptions extends StatelessWidget {
             ImgButton(
               leadingImage: "assets/bank.png",
               text: "Bank",
+              onPressed: (){},
             ),
             Expanded(
               child: SizedBox(),
             ),
-            Footer(),
+            Footer(currentPage: "Withdraw",),
           ],
         ),
       ),

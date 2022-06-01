@@ -1,4 +1,6 @@
+import 'package:btc_app/otp.dart';
 import 'package:btc_app/widgets/input_field.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
@@ -45,7 +47,12 @@ class SignUp extends StatelessWidget {
                       primary: const Color(0xff40E0E0), 
                       padding: EdgeInsets.all(19),
                   ),
-                  onPressed: ()=> (){},
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(builder: (context) => OTP()),
+                    );
+                  },
                   child: SizedBox(
                     width: double.infinity,
                     child: Text(

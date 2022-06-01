@@ -43,7 +43,7 @@ class ReceiveMoney extends StatelessWidget {
                 ),
               ),
             ),
-            Footer(),
+            Footer(currentPage: "Receive"),
           ],
         ),
       ),

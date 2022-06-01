@@ -13,7 +13,7 @@ class HeaderButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
           primary: const Color(0xff40E0E0)
       ),
-      onPressed: ()=> onPressed,
+      onPressed: ()=> onPressed(),
       child: Text(
         text,
         style: TextStyle(

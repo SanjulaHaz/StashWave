@@ -1,7 +1,14 @@
+import 'package:btc_app/funding_options.dart';
+import 'package:btc_app/intro.dart';
 import 'package:btc_app/widgets/header_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
+
+  final String? currentPage;
+
+  const Header({super.key, this.currentPage});
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +19,19 @@ class Header extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Align(
+            Align(
               alignment: Alignment.centerRight,
-              child: CircleAvatar(
-                  radius: 17,
-                  backgroundImage: AssetImage("assets/profile_img.png")
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(builder: (context) => Intro()),
+                  );
+                },
+                child: CircleAvatar(
+                    radius: 17,
+                    backgroundImage: AssetImage("assets/profile_img.png"),
+                ),
               ),
             ),
             const SizedBox(
@@ -63,7 +78,14 @@ class Header extends StatelessWidget {
                     ),
                   ],
                 ),
-                HeaderButton(text: "Fund", onPressed: (){}),
+                HeaderButton(text: "Fund", onPressed: (){
+                  if(currentPage != "Fund"){
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(builder: (context) => FundingOptions()),
+                    );
+                  }
+                }),
               ],
             ),
             const SizedBox(

@@ -44,7 +44,7 @@ class SendMoney extends StatelessWidget {
                 ),
               ),
             ),
-            Footer(),
+            Footer(currentPage: "Send Money"),
           ],
         ),
       ),

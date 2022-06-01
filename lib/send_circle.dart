@@ -38,6 +38,7 @@ class SendCircle extends StatelessWidget {
               ImgButton(
                 leadingImage: "assets/user.png",
                 text: "To Circle",
+                onPressed: (){},
               ),
               SizedBox(
                 height: 8,
@@ -45,6 +46,7 @@ class SendCircle extends StatelessWidget {
               ImgButton(
                 leadingIcon: CupertinoIcons.qrcode,
                 text: "Scan QR code",
+                onPressed: (){},
               ),
               Expanded(
                 child: SizedBox(),

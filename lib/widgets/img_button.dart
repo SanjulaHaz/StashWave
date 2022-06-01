@@ -5,8 +5,9 @@ class ImgButton extends StatelessWidget {
   final IconData? leadingIcon;
   final String? leadingImage;
   final String text;
+  final Function onPressed;
 
-  const ImgButton({super.key, this.leadingIcon, this.leadingImage, required this.text});
+  const ImgButton({super.key, this.leadingIcon, this.leadingImage, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class ImgButton extends StatelessWidget {
             primary: Theme.of(context).primaryColor,
             padding: EdgeInsets.symmetric(vertical: 18, horizontal: 30),
         ),
-        onPressed: (){},
+        onPressed: ()=> onPressed(),
         child: Row(
           children: [
             leadingIcon!=null?Icon(leadingIcon):Image.asset(leadingImage!),

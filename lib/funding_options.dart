@@ -12,7 +12,7 @@ class FundingOptions extends StatelessWidget {
         backgroundColor: Theme.of(context).backgroundColor,
         body: Column(
           children: [
-            Header(),
+            Header(currentPage: "Fund"),
             const SizedBox(
               height: 25,
             ),
@@ -37,6 +37,7 @@ class FundingOptions extends StatelessWidget {
             ImgButton(
               leadingImage: "assets/phone.png",
               text: "Deposit with card (MoonPay)",
+              onPressed: (){},
             ),
             SizedBox(
               height: 8,
@@ -44,6 +45,7 @@ class FundingOptions extends StatelessWidget {
             ImgButton(
               leadingImage: "assets/bank.png",
               text: "Deposit BTC, CashApp, Wallets",
+              onPressed: (){},
             ),
             Expanded(
               child: SizedBox(),

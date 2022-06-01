@@ -38,6 +38,7 @@ class RequestMoney extends StatelessWidget {
             ImgButton(
               leadingImage: "assets/user.png",
               text: "From circles",
+              onPressed: (){},
             ),
             SizedBox(
               height: 8,
@@ -45,6 +46,7 @@ class RequestMoney extends StatelessWidget {
             ImgButton(
               leadingIcon: CupertinoIcons.qrcode,
               text: "Share link",
+              onPressed: (){},
             ),
             Expanded(
                 child: SizedBox(),

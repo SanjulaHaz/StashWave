@@ -1,5 +1,4 @@
-import 'package:btc_app/intro.dart';
-import 'package:btc_app/otp.dart';
+import 'package:btc_app/receive_money.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color(0xff02071A),
         primaryColor: const Color(0xff151A29),
       ),
-      home: Intro(),
+      home: ReceiveMoney(),
     );
   }
 }

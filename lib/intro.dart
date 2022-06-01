@@ -1,10 +1,35 @@
+import 'dart:async';
+
+import 'package:btc_app/receive_money.dart';
+import 'package:btc_app/signup.dart';
 import 'package:btc_app/widgets/intro_body.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class Intro extends StatelessWidget {
+class Intro extends StatefulWidget {
 
+  @override
+  State<Intro> createState() => _IntroState();
+}
+
+class _IntroState extends State<Intro> {
   final PageController pageController = PageController();
+
+  @override
+  initState(){
+    super.initState();
+    pageController.addListener(() {
+      if(pageController.page==3){
+        Timer(Duration(seconds: 3), () {
+          Navigator.push(
+            context,
+            CupertinoPageRoute(builder: (context) => SignUp()),
+          );
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +89,7 @@ class Intro extends StatelessWidget {
                         activeDotColor: Color(0xff40E0E0),
                       ),
                       onDotClicked: (index) {
-                        // pageController.changePage(index);
+                        pageController.animateToPage(index, duration: Duration(milliseconds: 400), curve: Curves.easeIn);
                       }),
                 ),
               ),
